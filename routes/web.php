@@ -32,10 +32,11 @@ Route::get('/imovel/{id}/{titulo?}',['as'=>'site.imovel', function(){
 
 // Route::get('/contato',['as'=>'site.contato', 'uses'=>'Site\PaginaController@contato']);
 
-Auth::routes();
+Route::get('/admin/login',['as'=>'admin.login', function(){
+    return view('admin.login.index');
+} ]);
+
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
