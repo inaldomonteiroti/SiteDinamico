@@ -9,18 +9,42 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('lib/materialize/dist/css/materialize.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    
+
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
 <body>
     <div id="app">
+    <nav>
+        <div class="nav-wrapper     blue">
+        <div class="container">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            
+        </ul>
+        </div>
+        </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Home</a></li>
+  </ul>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -76,5 +100,8 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('lib/jquery/dist/jquery.js') }}"></script>
+    <script src="{{ asset('lib/materialize/dist/js/materialize.js') }}"></script>
+    <script src="{{ asset('js/init.js') }}"></script>
 </body>
 </html>
