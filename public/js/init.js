@@ -1,13 +1,8 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     var elems = document.querySelectorAll('.sidenav');
-//     var instances = M.Sidenav.init(elems, options);
-//   });
-
-  // Or with jQuery
-
   $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.slider').slider({full_width: true});
+    $(".dropdown-trigger").dropdown(); 
+    $('select').material_select();        
   });   
 
   

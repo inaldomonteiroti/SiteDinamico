@@ -9,23 +9,23 @@
     </div>
     <div class="row section">
     	<div class="col s12 m6">
-        <!-- @if(isset($pagina->mapa)) -->
+        @if(isset($pagina->mapa))
             <div class="video-container">
-                <!-- {!! $pagina->mapa !!} -->
+                {!! $pagina->mapa !!}
             </div>
 
-        <!-- @else -->
-            <img class="responsive-img" src="">
-        <!-- @endif -->
+        @else
+            <img class="responsive-img" src="{{ asset($pagina->imagem) }}">
+        @endif
 
     		
     	</div>
     	<div class="col s12 m6">
-    		<h4>Titulo</h4>
+    		<h4>{{ $pagina->titulo }}</h4>
     		<blockquote>
-    			Descrição
+    			{{ $pagina->descricao }}
     		</blockquote>
-    		    Texto
+    		<p>{{ $pagina->texto }}</p>
     	</div>
     </div>
 </div>
