@@ -11,12 +11,7 @@
 |
 */
 
-Route::get('/',['as'=>'site.home', function(){
-    return view('site.home');
-} ]);
- 
- 
-//Route::get('/',['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
+Route::get('/',['as'=>'site.home','uses'=>'Site\HomeController@index' ]);
  
 Route::get('/sobre',['as'=>'site.sobre', 'uses'=>'Site\PaginaController@sobre']);
  

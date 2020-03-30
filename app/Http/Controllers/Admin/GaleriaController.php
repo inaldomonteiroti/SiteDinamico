@@ -47,7 +47,7 @@ class GaleriaController extends Controller
         		$registro = new Galeria();
 
         		$rand = rand(11111,99999);
-	    		$diretorio = "img/imoveis/".str_slug($imovel->titulo,'_')."/";
+	    		$diretorio = "img/imoveis/".$imovel->titulo."/";
 	    		$ext = $imagem->guessClientExtension();
 	    		$nomeArquivo = "_img_".$rand.".".$ext;
 	    		$imagem->move($diretorio,$nomeArquivo);
